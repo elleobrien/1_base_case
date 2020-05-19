@@ -13,8 +13,7 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 
 # Fit a model
-depth = 5
-clf = SVC(max_depth=depth)
+clf = SVC()
 clf.fit(X_train,y_train)
 
 acc = clf.score(X_test, y_test)
