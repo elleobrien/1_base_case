@@ -1,4 +1,4 @@
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 from sklearn.metrics import plot_confusion_matrix
 import matplotlib.pyplot as plt
 import json
@@ -14,7 +14,7 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 # Fit a model
 depth = 5
-clf = RandomForestClassifier(max_depth=depth)
+clf = SVC(max_depth=depth)
 clf.fit(X_train,y_train)
 
 acc = clf.score(X_test, y_test)
